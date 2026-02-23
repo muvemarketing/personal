@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <radialGradient id="g1" cx="0.2" cy="0.2" r="0.9">
+      <stop offset="0" stop-color="#00D4FF" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#00D4FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="0.85" cy="0.15" r="0.9">
+      <stop offset="0" stop-color="#9A30EE" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#9A30EE" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#0A2540"/>
+  <rect width="100%" height="100%" fill="url(#g1)"/>
+  <rect width="100%" height="100%" fill="url(#g2)"/>
+  <circle cx="600" cy="420" r="180" fill="#1E293B" stroke="#00D4FF" stroke-width="6" opacity="0.9"/>
+  <text x="50%" y="420" text-anchor="middle" font-size="42" fill="#FFFFFF" font-family="Inter, Arial" dy="12">Matthew Willey</text>
+  <rect x="260" y="640" width="680" height="260" rx="22" fill="#1E293B" stroke="#9A30EE" stroke-width="4" opacity="0.9"/>
+  <text x="50%" y="720" text-anchor="middle" font-size="28" fill="#E2E8F0" font-family="Inter, Arial">Tech + Marketing Strategist</text>
+  <text x="50%" y="770" text-anchor="middle" font-size="18" fill="#E2E8F0" font-family="Inter, Arial">Turning complex technology into simple solutions for small business growth.</text>
+</svg>
