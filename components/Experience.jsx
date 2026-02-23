@@ -18,22 +18,18 @@ const tagStyle = {
 export default function Experience() {
   return (
     <section id="experience" className="section">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="airtable-shell">
           <div className="airtable-toolbar justify-between">
-            <h2 className="text-lg font-semibold text-slate-900">Experience grid</h2>
+            <h2 className="text-lg font-semibold text-slate-900">Experience</h2>
             <Link href="/resume.pdf" download className="text-link text-sm font-medium">Download PDF resume</Link>
           </div>
 
-          <div className="overflow-x-auto">
+          <div className="overflow-x-auto hidden md:block">
             <table className="airtable-table min-w-[720px]">
               <thead>
                 <tr>
-                  <th>Role</th>
-                  <th>Company</th>
-                  <th>Location</th>
-                  <th>Timeline</th>
-                  <th>Category</th>
+                  <th>Role</th><th>Company</th><th>Location</th><th>Timeline</th><th>Category</th>
                 </tr>
               </thead>
               <tbody>
@@ -43,13 +39,23 @@ export default function Experience() {
                     <td>{job.company}</td>
                     <td>{job.location}</td>
                     <td>{job.timeline}</td>
-                    <td>
-                      <span className={`airtable-pill ${tagStyle[job.type]}`}>{job.type}</span>
-                    </td>
+                    <td><span className={`airtable-pill ${tagStyle[job.type]}`}>{job.type}</span></td>
                   </tr>
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <div className="md:hidden p-4 grid gap-3">
+            {roles.map((job) => (
+              <article key={`${job.role}-${job.company}`} className="rounded-lg border border-slate-200 bg-slate-50 p-3">
+                <h3 className="font-medium text-slate-900">{job.role}</h3>
+                <p className="text-sm text-slate-700 mt-1">{job.company}</p>
+                <p className="text-sm text-slate-600">{job.location}</p>
+                <p className="text-sm text-slate-600 mt-1">{job.timeline}</p>
+                <span className={`airtable-pill mt-2 ${tagStyle[job.type]}`}>{job.type}</span>
+              </article>
+            ))}
           </div>
         </div>
       </div>

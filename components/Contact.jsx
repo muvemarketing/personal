@@ -26,7 +26,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section pb-16 md:pb-24">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="airtable-shell">
           <div className="airtable-toolbar">
             <h2 className="text-lg font-semibold text-slate-900">Contact form</h2>

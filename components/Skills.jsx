@@ -1,41 +1,28 @@
 const skills = [
-  { tool: "Airtable", category: "Automation", level: "Advanced", statusColor: "bg-emerald-100 text-emerald-700" },
-  { tool: "Zapier", category: "Automation", level: "Advanced", statusColor: "bg-emerald-100 text-emerald-700" },
-  { tool: "WordPress", category: "Web", level: "Advanced", statusColor: "bg-blue-100 text-blue-700" },
-  { tool: "Shopify", category: "Web", level: "Intermediate", statusColor: "bg-blue-100 text-blue-700" },
-  { tool: "HubSpot", category: "CRM/Marketing", level: "Advanced", statusColor: "bg-violet-100 text-violet-700" },
-  { tool: "GA4 + GTM", category: "Analytics", level: "Advanced", statusColor: "bg-amber-100 text-amber-700" },
-  { tool: "Google Ads", category: "Marketing", level: "Advanced", statusColor: "bg-amber-100 text-amber-700" },
-  { tool: "ChatGPT", category: "AI", level: "Intermediate", statusColor: "bg-slate-200 text-slate-700" },
+  "Airtable", "Zapier", "Make (Integromat)", "HubSpot", "Salesforce", "Google Analytics 4", "Google Tag Manager",
+  "Google Ads", "Meta Ads Manager", "LinkedIn Ads", "SEO Strategy", "Technical SEO", "Local SEO", "Conversion Rate Optimization",
+  "Copywriting", "Email Marketing", "Marketing Automation", "CRM Architecture", "Lead Scoring", "Pipeline Design",
+  "WordPress", "Shopify", "WooCommerce", "HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind CSS",
+  "Webflow", "Wix", "Squarespace", "Cloudflare", "Google Workspace", "Asana", "Monday.com", "Trello", "Notion",
+  "Slack Integrations", "Hotjar", "Ahrefs", "SEMrush", "Looker Studio", "Canva", "Adobe Photoshop", "Adobe Illustrator"
 ];
 
 export default function Skills() {
   return (
     <section id="skills" className="section">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="airtable-shell">
           <div className="airtable-toolbar">
-            <h2 className="text-lg font-semibold text-slate-900">Skills table</h2>
+            <h2 className="text-lg font-semibold text-slate-900">Skills ({skills.length})</h2>
           </div>
-          <div className="overflow-x-auto">
-            <table className="airtable-table min-w-[680px]">
-              <thead>
-                <tr>
-                  <th>Tool</th>
-                  <th>Category</th>
-                  <th>Proficiency</th>
-                </tr>
-              </thead>
-              <tbody>
-                {skills.map((skill) => (
-                  <tr key={skill.tool}>
-                    <td className="font-medium text-slate-900">{skill.tool}</td>
-                    <td>{skill.category}</td>
-                    <td><span className={`airtable-pill ${skill.statusColor}`}>{skill.level}</span></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="p-4 md:p-6">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
+              {skills.map((skill) => (
+                <li key={skill} className="rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-800">
+                  {skill}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

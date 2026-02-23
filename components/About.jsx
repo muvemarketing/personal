@@ -1,7 +1,7 @@
 export default function About() {
   return (
     <section id="about" className="section">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="airtable-shell">
           <div className="airtable-toolbar">
             <h2 className="text-lg font-semibold text-slate-900">About record</h2>

@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Hero() {
   return (
     <section className="section pt-10 md:pt-14">
-      <div className="mx-auto max-w-6xl px-6">
+      <div className="mx-auto max-w-6xl px-4 md:px-6">
         <div className="airtable-shell">
           <div className="airtable-toolbar justify-between">
             <div className="flex flex-wrap items-center gap-2">
