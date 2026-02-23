@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --airtable-bg: #f6f8fc;
+  --airtable-panel: #ffffff;
+  --airtable-border: #d9dee8;
+  --airtable-text: #1f2937;
+  --airtable-muted: #667085;
+  --airtable-green: #22c55e;
+  --airtable-blue: #3b82f6;
+  --airtable-purple: #8b5cf6;
+  --airtable-yellow: #f59e0b;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: linear-gradient(180deg, #f7f9fd 0%, #eef3fb 100%);
+  color: var(--airtable-text);
+}
+
+.section {
+  @apply py-12 md:py-16;
+}
+
+.airtable-shell {
+  @apply rounded-2xl border overflow-hidden;
+  border-color: var(--airtable-border);
+  background: var(--airtable-panel);
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+}
+
+.airtable-toolbar {
+  @apply px-4 md:px-6 py-3 border-b flex flex-wrap items-center gap-3;
+  border-color: var(--airtable-border);
+  background: linear-gradient(180deg, #fcfdff, #f5f8ff);
+}
+
+.airtable-pill {
+  @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
+}
+
+.airtable-table {
+  @apply w-full text-sm;
+}
+
+.airtable-table th {
+  @apply text-left font-semibold px-4 md:px-6 py-3 border-b;
+  border-color: var(--airtable-border);
+  color: #344054;
+  background-color: #f8fafe;
+}
+
+.airtable-table td {
+  @apply px-4 md:px-6 py-3 border-b align-top;
+  border-color: #edf1f7;
+}
+
+.airtable-table tbody tr:hover {
+  background: #f8fbff;
+}
+
+.btn-airtable {
+  @apply inline-flex items-center rounded-md px-4 py-2 text-sm font-medium transition-colors;
+  background: #1d4ed8;
+  color: white;
+}
+
+.btn-airtable:hover {
+  background: #1e40af;
+}
+
+a.text-link {
+  color: var(--airtable-blue);
+}
+
+a.text-link:hover {
+  color: #1d4ed8;
+}
